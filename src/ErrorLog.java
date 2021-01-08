@@ -15,9 +15,13 @@ public class ErrorLog {
 	 */
 	public boolean containsKey(String keyword) {
 		if (description.contains(" " + keyword + " "))
-		{
-
-		}
+		{ return true; }
+		else if (description.contains(keyword + " ") && (description.indexOf(keyword) == 0))
+		{ return true; }
+		else if (description.contains(" " + keyword) && (description.indexOf(keyword) == (description.length() - 1 - keyword.length())))
+		{return true; }
+		else
+		{return false;}
 	}
 	
 	public String getMachineId() { return machineId;}
