@@ -18,7 +18,7 @@ public class ErrorLog {
 		{ return true; }
 		else if (description.contains(keyword + " ") && (description.indexOf(keyword) == 0))
 		{ return true; }
-		else if (description.contains(" " + keyword) && (description.indexOf(keyword) == (description.length() - 1 - keyword.length())))
+		else if (description.contains(" " + keyword) && (description.indexOf(keyword) == (description.length() - keyword.length())))
 		{return true; }
 		else
 		{return false;}
